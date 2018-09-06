@@ -10,7 +10,7 @@ import java.util.Scanner;
  *
  * @author serrs9964
  */
-public class A0Q4 {
+public class A0Q6 {
 
     /**
      * @param args the command line arguments
@@ -18,15 +18,12 @@ public class A0Q4 {
     public static void main(String[] args) {
         // TODO code application logic here
          Scanner input = new Scanner(System.in);
-         //take in cost of all items
-         System.out.println("Please enter how many asterisks you would like to appear per line between 1 and 10");
-         int starNum = input.nextInt();
-         for(int i = 0; i < starNum; i++){
-        System.out.print("*");
-        
-    }
+        System.out.println("Enter a number between 50 and 100 to stop at");
+        int goalNum = input.nextInt();
+        int countDown = 100;
+        while(goalNum < countDown){
+            System.out.println(countDown);
+            countDown = countDown - 5;
+        }
     }
 }
-    
-
-
