@@ -19,5 +19,6 @@ public class A0QA10 {
         // TODO code application logic here
         Scanner input = new Scanner(System.in);
         System.out.println("Please enter a word of 2 characters or more");
+        
     }
 }
