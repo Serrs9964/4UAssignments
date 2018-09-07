@@ -22,9 +22,18 @@ public class A0Q8 {
         double principal = input.nextDouble();
         System.out.println("Please enter your interest rate as a decimal");
         double intRate = input.nextDouble();
-        double flatGrowth = principal*intRate;
-        while(principal<(principal*2)){
+        int counter = 0;
+        //double flatGrowth = principal*intRate;
+        double principal2 = principal * 2;
+        while (principal < principal2) {
+            principal = principal * (intRate + 1);
+        }
+        System.out.println("you're principal will be double at $"+ principal);
+        while (principal < 1000000) {
+            principal = principal * (intRate + 1);
+            counter++;
             
         }
+        System.out.println("you will have 1 million dollars in "+counter+" years");
     }
 }
