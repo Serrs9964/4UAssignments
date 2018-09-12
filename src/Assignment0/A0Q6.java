@@ -17,11 +17,11 @@ public class A0Q6 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-         Scanner input = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
         System.out.println("Enter a number between 50 and 100 to stop at");
         int goalNum = input.nextInt();
         int countDown = 100;
-        while(goalNum < countDown){
+        while (goalNum < countDown) {
             System.out.println(countDown);
             countDown = countDown - 5;
         }

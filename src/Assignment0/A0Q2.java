@@ -26,12 +26,12 @@ public class A0Q2 {
         double numTwo = input.nextDouble();
         System.out.println("Please enter 3 of 3 numbers");
         double numThree = input.nextDouble();
-        double product = numOne*numTwo*numThree;
+        double product = numOne * numTwo * numThree;
         System.out.println("The product of your three numbers is " + product);
-        double power = Math.pow(product,2);
-        System.out.println("The product to the power of 2 is "+ power);
+        double power = Math.pow(product, 2);
+        System.out.println("The product to the power of 2 is " + power);
         double Sqrt = Math.sqrt(product);
-        System.out.println("The Square root of the product is "+ Sqrt);
-        
+        System.out.println("The Square root of the product is " + Sqrt);
+
     }
 }

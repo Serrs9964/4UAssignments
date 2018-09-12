@@ -28,11 +28,11 @@ public class A0Q9 {
             String word = input.nextLine();
             for (int j = 0; j < word.length(); j++) {
                 wordLength++;
-                wordLengthH++;   
+                wordLengthH++;
             }
-            System.out.println("This word is "+wordLength+" characters long");
+            System.out.println("This word is " + wordLength + " characters long");
             wordLength = 0;
         }
-        System.out.println("your average word length is " +wordLengthH/10.0+" characters");
+        System.out.println("your average word length is " + wordLengthH / 10.0 + " characters");
     }
 }

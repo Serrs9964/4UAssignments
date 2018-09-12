@@ -17,16 +17,13 @@ public class A0Q4 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-         Scanner input = new Scanner(System.in);
-         //take in cost of all items
-         System.out.println("Please enter how many asterisks you would like to appear per line between 1 and 10");
-         int starNum = input.nextInt();
-         for(int i = 0; i < starNum; i++){
-        System.out.print("*");
-        
-    }
+        Scanner input = new Scanner(System.in);
+        //take in cost of all items
+        System.out.println("Please enter how many asterisks you would like to appear per line between 1 and 10");
+        int starNum = input.nextInt();
+        for (int i = 0; i < starNum; i++) {
+            System.out.print("*");
+
+        }
     }
 }
-    
-
-

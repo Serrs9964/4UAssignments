@@ -52,27 +52,27 @@ public class HelloWorld {
             System.out.println(count);
         }
         /*do {
-            count = count + 1;
-            System.out.println(count);
-        } while (condition);*/
+         count = count + 1;
+         System.out.println(count);
+         } while (condition);*/
 
 //for(int i=1; i <= num; i++){
 //    System.out.println(i);
 //}
 //array of random integers
-int[] randomNums = new int [10];
+        int[] randomNums = new int[10];
 //generate random numbers
-for(int i = 0; i < randomNums.length; i++){
-    randomNums[i] = (int)(Math.random()*100 +1);
-}
+        for (int i = 0; i < randomNums.length; i++) {
+            randomNums[i] = (int) (Math.random() * 100 + 1);
+        }
 //Calculate average
-int sum = 0;
+        int sum = 0;
         for (int i = 0; i < randomNums.length; i++) {
             sum = sum + randomNums[i];
         }
-        int average = sum/randomNums.length;
+        int average = sum / randomNums.length;
         System.out.println("The Average of 10 random integers between 1 and 100 is " + average);
-       
+
 
 
     }

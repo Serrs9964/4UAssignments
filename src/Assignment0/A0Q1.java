@@ -17,7 +17,7 @@ public class A0Q1 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-           Scanner input = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
 
         //Tell user what to do
         System.out.println("please enter your name");

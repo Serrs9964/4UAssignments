@@ -28,12 +28,12 @@ public class A0Q8 {
         while (principal < principal2) {
             principal = principal * (intRate + 1);
         }
-        System.out.println("you're principal will be double at $"+ principal);
+        System.out.println("you're principal will be double at $" + principal);
         while (principal < 1000000) {
             principal = principal * (intRate + 1);
             counter++;
-            
+
         }
-        System.out.println("you will have 1 million dollars in "+counter+" years");
+        System.out.println("you will have 1 million dollars in " + counter + " years");
     }
 }

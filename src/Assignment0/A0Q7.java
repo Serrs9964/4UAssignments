@@ -23,16 +23,14 @@ public class A0Q7 {
         double percentGrowth = 0.014;
         double yearCount = 0;
         double finalPop = 1e10;
-        double growthRate=percentGrowth*worldPop;
+        double growthRate = percentGrowth * worldPop;
         System.out.println(growthRate);
-        while(worldPop2<finalPop){
-            yearCount = yearCount+1;
-             worldPop2 = worldPop2 + growthRate;
-             System.out.println(worldPop2);
+        while (worldPop2 < finalPop) {
+            yearCount = yearCount + 1;
+            worldPop2 = worldPop2 + growthRate;
+            System.out.println(worldPop2);
         }
-            currentYear=currentYear+yearCount;
-             System.out.println("The year will be "+ currentYear +" when the population hits 10000000000");        
-        }
+        currentYear = currentYear + yearCount;
+        System.out.println("The year will be " + currentYear + " when the population hits 10000000000");
     }
-    
-
+}
