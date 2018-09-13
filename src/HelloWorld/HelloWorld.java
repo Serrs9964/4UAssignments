@@ -22,7 +22,7 @@ public class HelloWorld {
 
         //Tell user what to do
         System.out.println("please enter your name");
-
+        System.out.println(1%2);
         //Get name and store in variable
         String name = input.nextLine();
 

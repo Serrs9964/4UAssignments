@@ -10,28 +10,24 @@ package Assignment1;
  */
 public class A1Q1 {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here\
-        int n = test.bunnyEars(1);
-        test.bunnyEars(1);
-        A1Q1 test = new A1Q1();
-    }
-    public int bunnyEars(int n){
+    public int bunnyEars(int ears) {
         //base case
-        if(n==0){
+        if (ears == 0) {
             return 0;
         }
-        if((n%2)>0){
-            n=n+2;
-        }if((n%2)==0){
-            n=n+3;
+        
+        //recursive case
+        if (ears % 2 == 1) {
+            return 2 + bunnyEars (ears -1);
+        }else {
+            return 3 + bunnyEars (ears -1);
         }
-        return n;
-            
         
     }
 
+    public static void main(String[] args) {
+        A1Q1 test = new A1Q1();
+        int ears = test.bunnyEars(6);
+        System.out.println("there are " + ears + " bunny ears");
+    }
 }
