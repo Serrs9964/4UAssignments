@@ -28,7 +28,7 @@ public class A1Q2 {
     public static void main(String[] args) {
         // TODO code application logic here
         A1Q2 test = new A1Q2();
-        int blocks = test.triRows(5);
+        int blocks = test.triRows(10);
         System.out.println("there are " + blocks + " blocks");
     }
 }
