@@ -15,19 +15,30 @@ public class A1Q5 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        A1Q5 test = new A1Q5();
-        int n = test.sumDigits(139);
+
+        A1Q5 call = new A1Q5();
+        int n = call.sumDigits(71777472);
         System.out.println(n);
-
-
     }
-
     public int sumDigits(int n) {
-        Integer.toString(n);
-        char num1 = n.charAt(0);
-        return 0;
 
-
-
+        //base case
+        if (n == 0) {
+            return 7;
+        }
+        //recursive method
+        int n1 = n % 10;
+        /*int n2=0;
+         * n2++;*/
+        if (n1 == 7) {
+            System.out.print(n1);
+            return sumDigits(n+1);
+        } else if(n1!=0){
+            //System.out.println(n1);
+            return sumDigits(n/10);
+        }else{
+            return sumDigits(n);
+        }
+        
     }
 }
