@@ -16,7 +16,7 @@ public class A1Q4 {
     public static void main(String[] args) {
         // TODO code application logic here
         A1Q4 test = new A1Q4();
-        int n = test.hailStone(3);
+        int n = test.hailStone(235235238);
         System.out.println(n);
 
 
