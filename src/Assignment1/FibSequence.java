@@ -13,21 +13,21 @@ public class FibSequence {
     /**
      * @param args the command line arguments
      */
-    public int fib(int n) {
-        //base case
-        if (n == 1 || n == 0) {
-            return 1;
-        }
-        //recursive call
-        return fib(n - 1) + fib(n - 2);
+    /*public int fib(int n) {
+     * //base case
+     * if (n == 1 || n == 0) {
+     * return 1;
+     * }
+     * //recursive call
+     * return fib(n - 1) + fib(n - 2);*/
 
-    }
+    
 
     public static void main(String[] args) {
         // TODO code application logic here
-        FibSequence test = new FibSequence();
-        int n = test.fib(1);
-        System.out.println("The number is " + n);
+        /*FibSequence test = new FibSequence();
+         * int n = test.fib(1);
+         * System.out.println("The number is " + n);*/
         
         int[][] maze1 = new int [6][6];
         maze1[0][0]=1;
@@ -71,7 +71,11 @@ public class FibSequence {
         maze1[3][5]=1;
         maze1[4][5]=1;
         maze1[5][5]=1;
-        test.solveMaze(maze1,0,1,5,3);
+        //test.solveMaze(maze1,0,1,5,3);
+         FibSequence test = new FibSequence();
+       int[]pies={34,12,76,34,125,87,34};
+       int best = test.mostSugar(0,pies);
+        System.out.println("Most sugar: "+best);
     }
 
     public void solveMaze(int[][] maze, int startX, int startY, int finishX, int finishY) {
@@ -119,7 +123,37 @@ public class FibSequence {
         maze[startX][startY]=0;
         
     }
+    public int combin(int index, int people,int groupSize){
+        //I have formed a group
+        if (groupSize == 0){
+            return 1;
+        }
+        //ran out of people
+        if(index >= people.length){
+            return 0;
+        }
+        int using = combin(index+1,people,groupSize-1);
+        int notUsing = combin(index+1,people,groupSize);
+        //return the sum
+        return using + notUsing;
+    }
     
+     public int mostSugar(int index, int[] pies){
+        if (index >= pies.length){
+            return 0;
+        }
+        //to eat pie or not to eat
+        int eatPie = pies[index] + mostSugar(index+2,pies);
+        int leavePie = mostSugar(index +1,pies);
+        
+        
+        //which pie was better
+        if(eatPie>leavePie){
+            return eatPie;
+        }else{
+            return leavePie;
+        }
+    }
             
    
 }
