@@ -18,16 +18,7 @@ public class A1Q5 {
 
         A1Q5 call = new A1Q5();
         int n = call.sumDigits(76777979);
-        //if(n==7){
-        //this needs to be fixed**********
-        if(n==0){
-            n=5;
-        } 
         System.out.println("There are " + n + " seven(s) in this number");
-        //}else{
-        //}
-
-
     }
 
     public int sumDigits(int n) {
@@ -37,17 +28,13 @@ public class A1Q5 {
         }
         //recursive method
         int n1 = n % 10;
-        int n2=0;
-       
-        
         if (n1 == 7) {
-            
             //System.out.println(n1);
             return sumDigits(n + 1);
         } else if (n1 != 0) {
             //System.out.println(n1);
             return sumDigits(n / 10);
-        }else{
+        } else {
             return sumDigits(n);
         }
 
