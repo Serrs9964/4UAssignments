@@ -17,17 +17,25 @@ public class A1Q7 {
         // TODO code application logic here
         A1Q7 test = new A1Q7();
         String hhello = new String();
-        String result = test.stringClean(hhello);
+        String result = test.stringClean(hhello?!);
         System.out.println(result);
                 
         
     }
     public String stringClean(String s){
-        
-        if(s.charAt(1) == s.charAt(2)){
-            return s.charAt(work);
+        /*if(s.charAt(1) == s.charAt(2)){
+         * return s.;
         }else{
             return stringClean(s);
+        }*/
+       
+        for(int i=s.length()-1; i>0;i--){
+            if(s.charAt(i)==s.charAt(i)||s.charAt(i)==s.charAt(i-1)){
+                System.out.println(s.charAt(i));
+                
+            }else{
+                return stringClean(s);
+            }
         }
     }
 }

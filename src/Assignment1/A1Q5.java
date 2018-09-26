@@ -15,10 +15,11 @@ public class A1Q5 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-
+       
         A1Q5 call = new A1Q5();
-        int n = call.sumDigits(76777979);
+        int n = call.sumDigits(76747070);
         System.out.println("There are " + n + " seven(s) in this number");
+        
     }
 
     public int sumDigits(int n) {
@@ -28,10 +29,11 @@ public class A1Q5 {
         }
         //recursive method
         int n1 = n % 10;
+        
         if (n1 == 7) {
-            //System.out.println(n1);
-            return sumDigits(n + 1);
-        } else if (n1 != 0) {
+            
+            return sumDigits(n+1);
+        } else if (n1 != 11) {
             //System.out.println(n1);
             return sumDigits(n / 10);
         } else {
