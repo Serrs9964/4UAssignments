@@ -17,25 +17,41 @@ public class A1Q7 {
         // TODO code application logic here
         A1Q7 test = new A1Q7();
         String hhello = new String();
-        String result = test.stringClean(hhello?!);
+        String result = test.stringClean(hhello);
         System.out.println(result);
-                
-        
+
+        String goodbbye = new String();
+        String result2 = test.removeRepeat(goodbbye);
+        System.out.println(result2);
+
+
     }
-    public String stringClean(String s){
-        /*if(s.charAt(1) == s.charAt(2)){
-         * return s.;
-        }else{
-            return stringClean(s);
-        }*/
-       
-        for(int i=s.length()-1; i>0;i--){
-            if(s.charAt(i)==s.charAt(i)||s.charAt(i)==s.charAt(i-1)){
-                System.out.println(s.charAt(i));
-                
-            }else{
-                return stringClean(s);
+
+    public String stringClean(String s) {
+        //base case
+        if (s == null || s.length() <= 0) {
+            System.out.println(s);
+            return s;
+        } else {
+            for (int i = s.length() - 1; i > 0; i--) {
+                if (s.charAt(i) == s.charAt(i + 1) || s.charAt(i) == s.charAt(i - 1)) {
+                    System.out.println(s);
+                    return stringClean(s);
+                } else {
+                    System.out.println(s);
+                    return stringClean(s);
+                }
             }
         }
+        System.out.println(s);
+        return (stringClean(s));
+    }
+
+    private static String removeRepeat(String input) {
+        A1Q7<Character> s = new A1Q7<Character>();
+        for (int n = 0; n < input.length(); n++) {
+            s.add(input.charAt(n));
+        }
+        return s.toString();
     }
 }
