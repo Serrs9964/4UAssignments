@@ -15,14 +15,14 @@ public class A1Q1 {
         if (ears == 0) {
             return 0;
         }
-        
+
         //recursive case
         if (ears % 2 == 1) {
-            return 2 + bunnyEars (ears -1);
-        }else {
-            return 3 + bunnyEars (ears -1);
+            return 2 + bunnyEars(ears - 1);
+        } else {
+            return 3 + bunnyEars(ears - 1);
         }
-        
+
     }
 
     public static void main(String[] args) {
