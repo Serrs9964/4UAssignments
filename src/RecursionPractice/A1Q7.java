@@ -31,7 +31,7 @@ public class A1Q7 {
         if (s == null || s.length() <= 0) {
             System.out.println(s + "4");
             s.toCharArray();
-            return main(s[0]);
+           // return main(s[0]);
         } else {
             for (int i = s.length() - 1; i > 0; i--) {
                 if (s.charAt(i) == s.charAt(i + 1) || s.charAt(i) == s.charAt(i - 1)) {
