@@ -16,7 +16,6 @@ public class SortingPractice {
         n[pos1] = n[pos2];
         n[pos2] = temp;
     }
-
     public void bubbleSort(int[] n) {
         //keep track of if we have swapped
         boolean swap = true;
@@ -33,10 +32,8 @@ public class SortingPractice {
                     swap = true;
                 }
             }
-
         }
     }
-
     public void selectionSort(int[] n) {
         //go through the list 
         for (int i = 0; i < n.length - 1; i++) {
@@ -48,33 +45,27 @@ public class SortingPractice {
                 if (n[min] > n[j]) {
                     //track that position instead if smaller found
                     min = j;
-                    
                 }
-
-
             }
             //put minimun in position
-                swap(n,i,min);
+            swap(n, i, min);
         }
     }
-    public void insertionSort(int[] n){
-        for (int i = 0; i < n.length-1; i++) {
-            int j = i+1;
+    public void insertionSort(int[] n) {
+        for (int i = 0; i < n.length - 1; i++) {
+            int j = i + 1;
             //while n is out of position
-            while(j>0 && n[j]<n[j-1]){
-                swap (n, j, j-1);
+            while (j > 0 && n[j] < n[j - 1]) {
+                swap(n, j, j - 1);
                 //move j down
                 j--;
-                
             }
         }
     }
-
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-
         //array of 10~ nums to sort
         int[] nums = new int[10];
         //randomly assign values
@@ -82,15 +73,11 @@ public class SortingPractice {
             //assign a random nymber between 0 and 100
             nums[i] = (int) (Math.random() * 101);
         }
-
         SortingPractice test = new SortingPractice();
         System.out.println("Before: ");
         for (int i = 0; i < nums.length; i++) {
             System.out.print(nums[i] + " ");
         }
-
-
-
         //test.bubbleSort(nums);
         test.selectionSort(nums);
         //test.insertionSort(nums);
@@ -98,11 +85,8 @@ public class SortingPractice {
         System.out.println("After: ");
         for (int i = 0; i < nums.length; i++) {
             System.out.print(nums[i] + " ");
-
         }
-        
-        
         System.out.println();
         System.out.println();
-}
+    }
 }
