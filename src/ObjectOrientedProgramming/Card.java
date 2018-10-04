@@ -22,7 +22,14 @@ public class Card {
     public static final int CLUB = 1;
     public static final int HEART = 2;
     public static final int DIAMOND = 3;
-
+    
+    
+    
+    
+    public static final int ACE = 1;
+    public static final int JACK = 11;
+    public static final int QUEEN = 12;
+    public static final int KING = 13;
     //constructor for card
     //initialize variables
     public Card(int rank, int suit/*, Color colour, boolean isVisible*/) {
@@ -60,6 +67,40 @@ public class Card {
         this.isVisible = !this.isVisible;
                 
     }
+    
+    @Override
+    public String toString(){
+        String card = "";
+        
+        //state the rank of the card (Ace - King)
+        if(this.rank>=2 && this.rank <= 10){
+            card = card + this.rank + " of ";
+        }else if(this.rank == ACE){
+            card = card + "Ace of ";
+        }else if(this.rank == JACK){
+            card = card + "Jack of ";
+        }else if(this.rank == QUEEN){
+            card = card + "QUEEN of ";
+        }else if(this.rank == KING){
+            card = card + "KING of ";
+        }else{
+            card = card + "Error Joker ";
+        }
+        
+        //now add the suit (Spade, Club, Heart, Diamond)
+        if(this.suit == SPADE){
+            card = card + "Spades";
+        }else if(this.suit == CLUB){
+            card = card + "Clubs";
+        }else if(this.suit == DIAMOND){
+            card = card + "Diamonds";
+        }else if(this.suit == HEART){
+            card = card + "Hearts";
+        }else{
+            card = card + "Error Joker";
+        }
+        return card;
+    }
     /**
      * @param args the command line arguments
      */
@@ -67,9 +108,14 @@ public class Card {
         // TODO code application logic here
         Card c1 = new Card(5,Card.DIAMOND);
         Card c2 = new Card(10,Card.SPADE);
+        Card c3 = new Card(Card.ACE, Card.HEART);
         
         c1.flip();
         System.out.println("c1 is visible: " + c1.isVisible);
         System.out.println("c2 is visible: " + c2.isVisible);
+        
+        System.out.println(c1);
+        System.out.println(c2);
+        System.out.println(c3);
     }
 }
